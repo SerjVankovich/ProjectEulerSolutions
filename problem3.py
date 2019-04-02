@@ -10,12 +10,20 @@ def is_simple(n):
     return d * d > n
 
 
-max_simple = 2
+def product(array):
+    if len(array) == 0:
+        return 1
+    else:
+        return array[0] * product(array[1:])
+
+
+primals = []
 
 for i in range(2, 600851475144):
     if is_simple(i):
         if NUM % i == 0:
-            max_simple = i
-            print(max_simple)
+            primals.append(i)
+            if product(primals) == NUM:
+                break
 
-print(max_simple)
+print(max(primals))
