@@ -1,3 +1,4 @@
+# Solution to 9th problem in https://projecteuler.net/problem=9
 import math
 
 a = 0
